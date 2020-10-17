@@ -1,0 +1,79 @@
+#available-container{
+	position: fixed;
+	border: 1px solid;
+	width: calc(95vw - 100px);
+	height: 100vh;
+}
+
+#using-container{
+	position: fixed;
+	right: 0;
+	border: 1px solid;
+	width: 100px;
+	height: 100vh;
+}
+
+/*flexbox*/
+#available-container{
+	display: none;
+  	overflow: hidden;
+}
+
+#using-container{
+  	display: grid;
+  	overflow: hidden;
+}
+
+#available-panel-app{
+	background-color: black;
+	width: 5rem;
+	height: 5rem;
+}
+
+.available-app{
+	width: 8rem;
+	height: 8rem;
+}
+
+.using-app{
+	width: 5rem;
+	height: 5rem;
+}
+
+.vanish{
+  opacity: 0;
+  transition: opacity 1s;
+  animation: disappear 1s;
+}
+
+.matter{
+  opacity: 1;
+  transition: opacity 1s;
+  animation: appear 1s;
+}
+
+@keyframes appear{
+  0%{
+    transform: scale(.1);
+    opacity: 0;
+    border-radius: 100%;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+    border-radius: 0;
+  }
+}
+
+@keyframes disappear{
+  0%{
+    transform: scale(1);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100%{
+    transform: scale(.1);
+    opacity: 0;
+    border-radius: 100%;
+  }
+}

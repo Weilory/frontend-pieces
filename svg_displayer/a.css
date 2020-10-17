@@ -1,0 +1,23 @@
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+svg {
+	width: 80vw;
+	max-width: 600px;
+	overflow: visible;
+}
+
+#hide-flash {
+	animation: show 0.1s forwards 1s;
+}
+
+@keyframes show {
+	to {
+		opacity: 1;
+	}
+}

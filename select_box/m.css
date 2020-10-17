@@ -1,0 +1,40 @@
+.magic-box{
+  position: fixed; 
+  background-color: #ddd; 
+  border: 5px solid #000;
+  border-style: dashed;
+}
+
+.magic-box:hover{
+  opacity: 0.5;
+}
+
+.bope{
+  position: absolute;
+  right: 0px;
+  top: 0px; 
+  background-color: red; 
+  height: 30px; 
+  width: 30px;
+  border-radius: 30px; 
+  opacity: 0.5;
+}
+
+.eope{
+  position: absolute;
+  right: 35px;
+  top: 0px; 
+  background-color: blue; 
+  height: 30px; 
+  width: 30px;
+  border-radius: 30px; 
+  opacity: 0.5;
+}
+
+.eope:hover, .bope:hover{
+  opacity: 1;
+}
+
+.seeyou{
+  display: none;
+}

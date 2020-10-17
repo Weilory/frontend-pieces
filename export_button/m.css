@@ -1,0 +1,332 @@
+.button-container{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: lightgrey;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.partial{
+	position: relative;
+	width: 30vmin;
+	height: 30vmin;
+	margin: 10px;
+	border: 1px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.export_button {
+    position: relative;
+    width: 15vmin;
+    height: 15vmin;
+    transition: .2s;
+    transform: translate(0, 0) 
+               rotateY(0) skewY(0);
+    transition: .2s;
+    margin: 0 auto;
+}
+
+.export_button:hover {
+    transform: translate(-15px, -5px) 
+               rotateY(-15deg) skewY(-10deg);
+}
+
+i {
+    font-size: 4rem;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    z-index: 10;
+    transition: .2s;
+}
+
+.export_button:hover i {
+    color: white;
+}
+
+.export_button span {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+    transform: translate(0, 0);
+}
+
+.export_button:hover span:nth-child(1) {
+    transform: translate(3vmin, 1.5vmin);
+}
+
+.export_button:hover span:nth-child(2) {
+    transform: translate(6vmin, 3vmin);
+}
+
+.export_button:hover span:nth-child(3) {
+    transform: translate(9vmin, 4.5vmin);
+}
+
+.export_button span:nth-of-type(4)::before {
+    content: '';
+    position: absolute;
+    width: 0; height: 100%;
+    top: 0; left: 0;
+    border-bottom: 1px solid black;
+    transition: .2s;
+}
+
+.export_button span:nth-of-type(4)::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 0;
+    top: 100%; left: 0;
+    border-right: 1px solid black;
+    transition: .2s;
+}
+
+
+#purple-button span:nth-of-type(4){
+    transform: translate(-4px, -4px);
+    transition: .2s;
+    z-index: 0;
+    opacity: .5;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+/*1*/
+#purple-button{
+	background-color: rgba(107, 91, 149, 0.4);
+}
+
+/*2*/
+#purple-button:hover span:nth-child(1) {
+    transform: translate(3vmin, 1.5vmin);
+	background-color: rgba(107, 91, 149, 0.6);
+}
+
+/*3*/
+#purple-button:hover span:nth-child(2) {
+    transform: translate(6vmin, 3vmin);
+	background-color: rgba(107, 91, 149, 0.8);
+}
+
+/*4*/
+#purple-button:hover span:nth-child(3) {
+    transform: translate(9vmin, 4.5vmin);
+	background-color: rgba(107, 91, 149, 1);
+}
+
+#purple-button:hover span:nth-of-type(4)::before {
+    width: 100%;
+    transition-delay: .4s;
+}
+
+#purple-button:hover span:nth-of-type(4)::after {
+    height: 100%;
+    transition-delay: .6s;
+    top: 0;
+}
+
+#purple-button:hover span:nth-of-type(4) {
+    transform: translate(12vmin, 6vmin);
+    transition-delay: .2s;
+}
+
+#green-button span:nth-of-type(4){
+    transform: translate(-4px, -4px);
+    transition: .2s;
+    z-index: 0;
+    opacity: .5;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+/*1*/
+#green-button{
+	background-color: rgba(64, 93, 39, 0.4);
+}
+
+/*2*/
+#green-button:hover span:nth-child(1) {
+    transform: translate(3vmin, 1.5vmin);
+	background-color: rgba(64, 93, 39, 0.6);
+}
+
+/*3*/
+#green-button:hover span:nth-child(2) {
+    transform: translate(6vmin, 3vmin);
+	background-color: rgba(64, 93, 39, 0.8);
+}
+
+/*4*/
+#green-button:hover span:nth-child(3) {
+    transform: translate(9vmin, 4.5vmin);
+	background-color: rgba(64, 93, 39, 1);
+}
+
+#green-button:hover span:nth-of-type(4)::before {
+    width: 100%;
+    transition-delay: .4s;
+}
+
+#green-button:hover span:nth-of-type(4)::after {
+    height: 100%;
+    transition-delay: .6s;
+    top: 0;
+}
+
+#green-button:hover span:nth-of-type(4) {
+    transform: translate(12vmin, 6vmin);
+    transition-delay: .2s;
+}
+
+#red-button span:nth-of-type(4){
+    transform: translate(-4px, -4px);
+    transition: .2s;
+    z-index: 0;
+    opacity: .5;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+/*1*/
+#red-button{
+	background-color: rgba(201, 76, 76, 0.4);
+}
+
+/*2*/
+#red-button:hover span:nth-child(1) {
+    transform: translate(3vmin, 1.5vmin);
+	background-color: rgba(201, 76, 76, 0.6);
+}
+
+/*3*/
+#red-button:hover span:nth-child(2) {
+    transform: translate(6vmin, 3vmin);
+	background-color: rgba(201, 76, 76, 0.8);
+}
+
+/*4*/
+#red-button:hover span:nth-child(3) {
+    transform: translate(9vmin, 4.5vmin);
+	background-color: rgba(201, 76, 76, 1);
+}
+
+#red-button:hover span:nth-of-type(4)::before {
+    width: 100%;
+    transition-delay: .4s;
+}
+
+#red-button:hover span:nth-of-type(4)::after {
+    height: 100%;
+    transition-delay: .6s;
+    top: 0;
+}
+
+#red-button:hover span:nth-of-type(4) {
+    transform: translate(12vmin, 6vmin);
+    transition-delay: .2s;
+}
+
+#blue-button span:nth-of-type(4){
+    transform: translate(-4px, -4px);
+    transition: .2s;
+    z-index: 0;
+    opacity: .5;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+/*1*/
+#blue-button{
+	background-color: rgba(51, 193, 193, 0.4);
+}
+
+/*2*/
+#blue-button:hover span:nth-child(1) {
+    transform: translate(3vmin, 1.5vmin);
+	background-color: rgba(51, 193, 193, 0.6);
+}
+
+/*3*/
+#blue-button:hover span:nth-child(2) {
+    transform: translate(6vmin, 3vmin);
+	background-color: rgba(51, 193, 193, 0.8);
+}
+
+/*4*/
+#blue-button:hover span:nth-child(3) {
+    transform: translate(9vmin, 4.5vmin);
+	background-color: rgba(51, 193, 193, 1);
+}
+
+#blue-button:hover span:nth-of-type(4)::before {
+    width: 100%;
+    transition-delay: .4s;
+}
+
+#blue-button:hover span:nth-of-type(4)::after {
+    height: 100%;
+    transition-delay: .6s;
+    top: 0;
+}
+
+#blue-button:hover span:nth-of-type(4) {
+    transform: translate(12vmin, 6vmin);
+    transition-delay: .2s;
+}
+
+#brown-button span:nth-of-type(4){
+    transform: translate(-4px, -4px);
+    transition: .2s;
+    z-index: 0;
+    opacity: .5;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+/*1*/
+#brown-button{
+	background-color: rgba(103, 77, 60, 0.4);
+}
+
+/*2*/
+#brown-button:hover span:nth-child(1) {
+    transform: translate(3vmin, 1.5vmin);
+	background-color: rgba(103, 77, 60, 0.6);
+}
+
+/*3*/
+#brown-button:hover span:nth-child(2) {
+    transform: translate(6vmin, 3vmin);
+	background-color: rgba(103, 77, 60, 0.8);
+}
+
+/*4*/
+#brown-button:hover span:nth-child(3) {
+    transform: translate(9vmin, 4.5vmin);
+	background-color: rgba(103, 77, 60, 1);
+}
+
+#brown-button:hover span:nth-of-type(4)::before {
+    width: 100%;
+    transition-delay: .4s;
+}
+
+#brown-button:hover span:nth-of-type(4)::after {
+    height: 100%;
+    transition-delay: .6s;
+    top: 0;
+}
+
+#brown-button:hover span:nth-of-type(4) {
+    transform: translate(12vmin, 6vmin);
+    transition-delay: .2s;
+}

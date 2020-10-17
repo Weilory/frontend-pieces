@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="h.css" />
+</head>
+<body>
+
+<div id='font-control-panel'>
+	<div id='fp-drag'>
+		<div id='fp-dismiss'></div>
+	</div>
+	<div class='fp-content'>
+		<div id='fp-font' class='fp-item'>
+			<div class="fp-title">font: </div>
+			<select class='fp-select' id="font-select"></select>
+		</div>
+		<div id="fp-variant" class='fp-item'>
+			<div class="fp-title">variant: </div>
+			<select class='fp-select' id="font-variant"></select>
+		</div>
+		<div id="fp-text" class='fp-item'>
+		<div class="fp-title">text: </div>
+			<input type="text" class='fp-input' id="input-text" value="Verb" />
+		</div>
+		<div id='fp-size' class='fp-item'>
+			<div class="fp-title">size: </div>
+			<input type="number" class='fp-input' id="input-size" value="100" />
+		</div>
+		<div id='fp-path' class='fp-item fp-inline'>
+			<label>union: <input class='regular-checkbox' type="checkbox" id="input-union" /></label>
+			<label>kerning: <input class='regular-checkbox' type="checkbox" id="input-kerning" checked /></label>
+			<label>separate characters: <input class='regular-checkbox' type="checkbox" id="input-separate" /></label>
+		</div>
+		<div id='fp-accuracy' class='fp-item'>
+			<div class="fp-title">bezier accuracy: </div>
+			<input type="text" class='fp-input' id="input-bezier-accuracy" placeholder="auto" />
+		</div>
+		<button type='button' class='fontinsert'>Go</button>
+		<textarea style="display: none;" id='output-svg'></textarea>
+	</div>
+</div>
+
+
+<script src="h.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
