@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+  <link rel="stylesheet" href="keyboard.css" />
+
+  <!-- polyfill.js 
+  https://github.com/inexorabletash/polyfill
+   -->
+  <script type='text/javascript' src='polyfill-0.1.41/polyfill.min.js'></script>
+  <!-- marked.js
+  https://github.com/markedjs/marked
+   -->
+  <script type='text/javascript' src='marked-1.2.5/marked.min.js'></script>
+
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+  </script>
+
+  <!-- mathjax.js
+  https://github.com/markedjs/marked
+   -->
+  <script id="MathJax-script" async src="MathJax-3.1.2/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+<textarea id="comment-area-text">
+	## lets dance
+
+  \(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\)
+
+  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]
+
+  $E=mc^2$
+
+  $$p=nKT$$
+
+</textarea>
+
+<p id="content">
+	
+</p>
+
+<script>
+  var mathId = document.getElementById("content"); 
+
+  document.getElementById('comment-area-text').addEventListener('input', function(){
+     document.getElementById('content').innerHTML = document.getElementById('comment-area-text').value;
+     MathJax.typesetPromise();
+     document.getElementById('content').innerHTML = marked(document.getElementById('content').innerHTML);
+  });
+
+  window.addEventListener('load', function(){
+     document.getElementById('content').innerHTML = document.getElementById('comment-area-text').value;
+     MathJax.typesetPromise();
+     document.getElementById('content').innerHTML = marked(document.getElementById('content').innerHTML);
+  });
+</script>
+
+</body>
+</html>
+
+
+
