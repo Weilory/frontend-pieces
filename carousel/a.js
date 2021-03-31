@@ -1,3 +1,8 @@
+/*
+author Messiz Qin
+contact messizqin@gmail.com
+*/
+
 const jpg_filenames = [
 	'book',
 	'build',
