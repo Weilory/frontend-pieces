@@ -1,0 +1,39 @@
+/*
+ShowHide
+*/
+
+.page-height-trans{
+  overflow: hidden !important;
+  height: 20px !important; 
+}
+
+.page-width-trans{
+  overflow: hidden !important;
+  height: 0px !important; 
+  width: 0px !important; 
+}
+
+.page-scale-trans{
+  overflow: hidden !important;
+  transform: scale(0) !important;
+}
+
+.page-rotate-trans{
+  overflow: hidden !important;
+  transform: scale(0) rotate(180deg) !important;
+}
+
+.page-visual-trans{
+  overflow: hidden !important;
+  opacity: 0 !important;
+}
+
+.page-border-trans{
+  overflow: hidden !important;
+  border-radius: 100% !important;
+}
+
+/* toggle as selected; before animation */
+.page-pre-top-center-trans{
+  transform-origin: top center !important;
+}
